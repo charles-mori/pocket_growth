@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -40,47 +41,47 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC0oyUz_jC0iJXXWZYiaCV31wE33EYArbA',
-    appId: '1:86327090390:web:9d38292656c502bafc3d77',
-    messagingSenderId: '86327090390',
-    projectId: 'loan-system-37b90',
-    authDomain: 'loan-system-37b90.firebaseapp.com',
-    storageBucket: 'loan-system-37b90.firebasestorage.app',
+  static final FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.env['WEB_API_KEY']!,
+    appId: dotenv.env['WEB_APP_ID']!,
+    messagingSenderId: dotenv.env['WEB_MESSAGING_SENDER_ID']!,
+    projectId: dotenv.env['WEB_PROJECT_ID']!,
+    authDomain: dotenv.env['WEB_AUTH_DOMAIN'],
+    storageBucket: dotenv.env['WEB_STORAGE_BUCKET'],
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCgev9pG9v3foNQVBguHxd19fmn8if7EWc',
-    appId: '1:86327090390:android:3c2fbe93ae2db78bfc3d77',
-    messagingSenderId: '86327090390',
-    projectId: 'loan-system-37b90',
-    storageBucket: 'loan-system-37b90.firebasestorage.app',
+  static final FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['ANDROID_API_KEY']!,
+    appId: dotenv.env['ANDROID_APP_ID']!,
+    messagingSenderId: dotenv.env['ANDROID_MESSAGING_SENDER_ID']!,
+    projectId: dotenv.env['ANDROID_PROJECT_ID']!,
+    storageBucket: dotenv.env['ANDROID_STORAGE_BUCKET'],
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB5a5hThhyU1EZP1wF0DFdwoq_UF7GaEzU',
-    appId: '1:86327090390:ios:c2579b7c0c2f8d2ffc3d77',
-    messagingSenderId: '86327090390',
-    projectId: 'loan-system-37b90',
-    storageBucket: 'loan-system-37b90.firebasestorage.app',
-    iosBundleId: 'com.example.pocketGrowth',
+  static final FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['IOS_API_KEY']!,
+    appId: dotenv.env['IOS_APP_ID']!,
+    messagingSenderId: dotenv.env['IOS_MESSAGING_SENDER_ID']!,
+    projectId: dotenv.env['IOS_PROJECT_ID']!,
+    storageBucket: dotenv.env['IOS_STORAGE_BUCKET'],
+    iosBundleId: dotenv.env['IOS_BUNDLE_ID'],
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyB5a5hThhyU1EZP1wF0DFdwoq_UF7GaEzU',
-    appId: '1:86327090390:ios:c2579b7c0c2f8d2ffc3d77',
-    messagingSenderId: '86327090390',
-    projectId: 'loan-system-37b90',
-    storageBucket: 'loan-system-37b90.firebasestorage.app',
-    iosBundleId: 'com.example.pocketGrowth',
+  static final FirebaseOptions macos = FirebaseOptions(
+    apiKey: dotenv.env['IOS_API_KEY']!,
+    appId: dotenv.env['IOS_APP_ID']!,
+    messagingSenderId: dotenv.env['IOS_MESSAGING_SENDER_ID']!,
+    projectId: dotenv.env['IOS_PROJECT_ID']!,
+    storageBucket: dotenv.env['IOS_STORAGE_BUCKET'],
+    iosBundleId: dotenv.env['IOS_BUNDLE_ID'],
   );
 
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyC0oyUz_jC0iJXXWZYiaCV31wE33EYArbA',
-    appId: '1:86327090390:web:ba82a6c08bc223a6fc3d77',
-    messagingSenderId: '86327090390',
-    projectId: 'loan-system-37b90',
-    authDomain: 'loan-system-37b90.firebaseapp.com',
-    storageBucket: 'loan-system-37b90.firebasestorage.app',
+  static final FirebaseOptions windows = FirebaseOptions(
+    apiKey: dotenv.env['WINDOWS_API_KEY']!,
+    appId: dotenv.env['WINDOWS_APP_ID']!,
+    messagingSenderId: dotenv.env['WINDOWS_MESSAGING_SENDER_ID']!,
+    projectId: dotenv.env['WINDOWS_PROJECT_ID']!,
+    authDomain: dotenv.env['WINDOWS_AUTH_DOMAIN'],
+    storageBucket: dotenv.env['WINDOWS_STORAGE_BUCKET'],
   );
 }
