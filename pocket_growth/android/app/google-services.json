@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "86327090390",
+    "project_id": "loan-system-37b90",
+    "storage_bucket": "loan-system-37b90.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86327090390:android:3c2fbe93ae2db78bfc3d77",
+        "android_client_info": {
+          "package_name": "com.example.pocket_growth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgev9pG9v3foNQVBguHxd19fmn8if7EWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
